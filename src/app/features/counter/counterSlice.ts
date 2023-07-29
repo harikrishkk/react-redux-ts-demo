@@ -19,7 +19,7 @@ export const incrementAsync = createAsyncThunk('counter/fetchCount', async (amou
 })
 
 export const incrementIfOdd = (amount: number): AppThunk => (dispatch, getState) => {
-  const currVal = getState().value;
+  const currVal = getState().counter.value;
   if (currVal % 2 === 1) {
     dispatch(incrementByAmount(amount))
   }

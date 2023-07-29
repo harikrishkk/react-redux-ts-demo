@@ -8,7 +8,7 @@ import {
 } from './counterSlice';
 
 const Counter = () => {
-  const counter = useAppSelector((state) => state.value);
+  const counter = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
 
   const incrementCount = () => {
